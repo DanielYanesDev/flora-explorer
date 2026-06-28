@@ -1,44 +1,139 @@
-# Plants View 🌿
+# Flora Explorer 🌿
 
-Page for viewing random plants around the world.
+[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-8-646cff?style=flat-square&logo=vite)](https://vitejs.dev)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-## Preview
+A responsive web application for discovering random plants from around the world. Built with React, TypeScript, and Chakra UI, Flora Explorer integrates with the Perenual API to fetch and display plants data.
 
-![Preview](./docs/preview.png)
+## 🌐 Live Demo
 
-## Tech Stack
+[https://flora-explorer.vercel.app](https://flora-explorer.vercel.app)
 
-- React
-- TypeScript
-- Vite
-- Chakra UI
+## 📸 Preview
 
-## API
+![Preview](docs/preview.png)
 
-- The API used is the [Perenual API](https://perenual.com/), specifically the endpoint `https://perenual.com/api/v2/species-list`.
-- The API key is required to use the API.
+## ✨ Features
 
-### Environment Variables
+- **Display random plants** – Fetch and display thirty random plants with each request
+- **Responsive layout** – Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light mode** – Toggle between themes for comfortable viewing
+- **Skeleton loading states** – Smooth loading experience while fetching data
+- **Error handling** – Graceful error messages for API failures
+- **Real plant data** – Integrated with the Perenual API for accurate information
 
-- `VITE_API_KEY`: The API key for the Perenual API.
-- `VITE_API_URL`: The API URL for the Perenual API.
+## 🎯 Project Highlights
 
-## Installation
+- **Type-safe code** – Full TypeScript implementation for robustness
+- **Reusable components** – Clean, modular React component architecture
+- **Environment variables** – Secure API key management
+- **Responsive design** – Mobile-first approach with Chakra UI
+- **Clean folder structure** – Well-organized codebase for maintainability
 
-- Clone this repository. And then install the dependencies using:
+## 🛠️ Tech Stack
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Chakra UI**
+- **Perenual API**
+
+## 📋 Requirements
+
+- **Node.js** 18+
+- **npm** or **Bun**
+
+## 🚀 Installation
+
+### 1. Clone this repository:
+
+```bash
+git clone https://github.com/DanielYanesDev/flora-explorer.git
+cd flora-explorer
+```
+
+### 2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Running
-
-- Run the development server using:
+Or with Bun:
 
 ```bash
-npm run dev
+bun install
 ```
 
-## License
+## 🔑 Environment Variables
 
-MIT
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_KEY=your_perenual_api_key_here
+VITE_API_URL=https://perenual.com/api/v2/species-list
+```
+
+## 📜 Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the application for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint to check code quality |
+| `npm run lint:fix` | Run ESLint and automatically fix issues |
+
+The app will be available at `http://localhost:5173`.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Icons.tsx
+│   ├── Layout.tsx
+│   ├── PlantCard.tsx
+│   ├── PlantsView.tsx
+│   └── ui/
+│       ├── color-mode.tsx
+│       ├── provider.tsx
+│       ├── toaster.tsx
+│       └── tooltip.tsx
+├── utils/
+│   └── functions.ts
+├── constants.ts
+├── types.d.ts
+├── App.tsx
+├── main.tsx
+└── index.css
+```
+
+## 📚 About
+
+This project was built to practice and showcase:
+
+- React hooks and state management
+- TypeScript for type-safe development
+- API integration and data fetching
+- Responsive UI design with Chakra UI
+- Component-based architecture
+- Modern build tools and development workflows
+
+## 📖 API Reference
+
+Flora Explorer uses the [Perenual API](https://perenual.com/) to fetch plant data. The endpoint used is: `https://perenual.com/api/v2/species-list`
+
+> An API key is required. Get yours for free at [https://perenual.com/user/developer](https://perenual.com/user/developer)
+
+## 🤝 Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines before opening a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+> If you found this project interesting, feel free to leave a ⭐ on the repository!
